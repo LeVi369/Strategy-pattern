@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimUDuck
 {
-    public class MuteQuack:QuackBehavior
+    public interface Flyable
     {
-        public string quack()
-        {
-            return "";
-        }
+        string fly();
     }
 }

@@ -6,31 +6,33 @@ using System.Threading.Tasks;
 
 namespace SimUDuck
 {
-    class Program
+    namespace SimUDuck
     {
-        static void Main(string[] args)
+        class Program
         {
-            Duck duck1 = new MallardDuck();
-            Duck duck2 = new RedHeadDuck();
-            Duck duck3 = new RubberDuck();
-            Duck duck4 = new DecoyDuck();
-            Duck[] masDuck = new Duck[] { duck1, duck2, duck3, duck4 };
-           foreach (Duck ma in masDuck)
+            static void Main(string[] args)
             {
-                Console.WriteLine(ma.swim()+ma.display() + ma.performFly() + ma.performQuack());
+                Duck duck1 = new MallardDuck();
+                Duck duck2 = new ReadHeadDuck();
+                Duck duck3 = new RubberDuck();
+                Duck duck4 = new DecoyDuck();
+                Duck[] strDuck = new Duck[] { duck1, duck2, duck3, duck4 };
+                foreach (Duck i in strDuck)
+                {
+                    Console.WriteLine($"{i.swim()}");
+                    Console.WriteLine($"{i.display()}");
+                    if (i is Quackable)
+                    {
+                        Console.WriteLine((i as Quackable).quack());
+                    }
+                    if (i is Flyable)
+                    {
+                        Console.WriteLine((i as Flyable).fly());
+                    }
+                }
+                Console.ReadLine();
+
             }
-            FlyBehavior flyBehavior = new FlyNoWay();
-            QuackBehavior quackBehavior = new Squack();
-            duck2.setquackBehavior(quackBehavior);
-            duck1.setflyBehavior(flyBehavior);
-
-            Console.WriteLine(duck2.display());
-            Console.WriteLine(duck2.performQuack());
-            Console.WriteLine(duck1.display());
-            Console.WriteLine(duck1.performFly());
- 
-            Console.ReadLine();
-
         }
     }
 }

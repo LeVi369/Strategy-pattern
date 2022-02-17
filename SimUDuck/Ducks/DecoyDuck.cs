@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace SimUDuck
 {
-    public class DecoyDuck : Duck
+    namespace SimUDuck
     {
-        public override string display()
+        public class DecoyDuck : Duck
         {
-            return "Деревянная бошка " + " " + flyBehavior.fly() + quackBehavior.quack() + GetType(); ;
-        }
-        public DecoyDuck()
-        {
-            flyBehavior = new FlyNoWay();
-            quackBehavior = new MuteQuack();
+            public override string display()
+            {
+                return "Деревянная утка-приманка " + this.GetType();
+            }
         }
     }
 }

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimUDuck
 {
-    public class FlyWithWings:FlyBehavior
+    public interface Quackable
     {
-        public string fly()
-        {
-            return "Хлоп хлоп хлоп";
-        }
+        string quack();
     }
 }

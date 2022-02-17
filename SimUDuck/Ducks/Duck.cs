@@ -10,29 +10,8 @@ namespace SimUDuck
     {
         public string swim()
         {
-            return "Бульк";
+            return "Бульк " + this.GetType();
         }
         public abstract string display();
-
-        protected FlyBehavior flyBehavior;
-        protected QuackBehavior quackBehavior;
-        public string performQuack()
-        {
-            return quackBehavior.quack();
-        }
-        public string performFly()
-        {
-            return flyBehavior.fly();
-        }
-        public FlyBehavior setflyBehavior(FlyBehavior flyBehavior)
-        {
-            this.flyBehavior = flyBehavior;
-            return flyBehavior;
-        }
-        public QuackBehavior setquackBehavior(QuackBehavior quackBehavior)
-        {
-            this.quackBehavior = quackBehavior;
-            return quackBehavior;
-        }
     }
 }
