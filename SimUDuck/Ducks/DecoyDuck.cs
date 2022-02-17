@@ -10,7 +10,12 @@ namespace SimUDuck
     {
         public override string display()
         {
-            return "Деревянная бошка " + this.GetType();
+            return "Деревянная бошка " + " " + flyBehavior.fly() + quackBehavior.quack() + GetType(); ;
+        }
+        public DecoyDuck()
+        {
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new MuteQuack();
         }
     }
 }

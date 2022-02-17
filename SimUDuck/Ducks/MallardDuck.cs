@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace SimUDuck
 {
-    public class MallardDuck : Duck, Flyable,Quackable
+    public class MallardDuck : Duck
     {
         public override string display()
         {
-            return "Я-кряква!" + " " + this.GetType();
+            return "Я-кряква!" + " " + flyBehavior.fly() + quackBehavior.quack() + GetType();
         }
-        public string fly()
+        public MallardDuck()
         {
-            return "Маах мах" + GetType();
-        }
-        public string quack()
-        {
-            return "Крряяя кря" + GetType();
+            flyBehavior = new FlyWithWings();
+            quackBehavior = new Quack();
         }
     }
 }
