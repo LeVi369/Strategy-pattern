@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimUDuck", "SimUDuck\SimUDuck.csproj", "{0C142B9D-E029-4D35-86D3-3554BB405072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducks", "Ducks\Ducks.csproj", "{F72BA5F7-4CB4-4C01-9824-971336C16D41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C142B9D-E029-4D35-86D3-3554BB405072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C142B9D-E029-4D35-86D3-3554BB405072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C142B9D-E029-4D35-86D3-3554BB405072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C142B9D-E029-4D35-86D3-3554BB405072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72BA5F7-4CB4-4C01-9824-971336C16D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72BA5F7-4CB4-4C01-9824-971336C16D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72BA5F7-4CB4-4C01-9824-971336C16D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72BA5F7-4CB4-4C01-9824-971336C16D41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A24E93C1-356C-4B63-87E9-A606162949DF}
+	EndGlobalSection
+EndGlobal
