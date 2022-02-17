@@ -10,19 +10,26 @@ namespace SimUDuck
     {
         static void Main(string[] args)
         {
-            Duck duck1 = new RedHeadDuck();
-            Duck duck2 = new MallardDuck();
-
-            Duck[] mas = new Duck[] { duck1, duck2 };
-
-            for (int i = 0; i < mas.Length; i++)
+            Duck duck1 = new MallardDuck();
+            Duck duck2 = new RedHeadDuck();
+            Duck duck3 = new RubberDuck();
+            Duck duck4 = new DecoyDuck();
+            Duck[] masDuck = new Duck[] { duck1, duck2, duck3, duck4 };
+            foreach (Duck i in masDuck)
             {
-                Console.WriteLine(mas[i].Swim());
-                Console.WriteLine(mas[i].Display());
-                Console.WriteLine(mas[i].Quack());
+                Console.WriteLine($"{i.swim()}");
+                Console.WriteLine($"{i.display()}");
+                if (i is Quackable)
+                {
+                    Console.WriteLine((i as Quackable).quack());
+                }
+                if (i is Flyable)
+                {
+                    Console.WriteLine((i as Flyable).fly());
+                }
             }
+            Console.ReadLine();
 
-            Console.ReadKey();
         }
     }
 }
